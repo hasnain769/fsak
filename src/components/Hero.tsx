@@ -73,7 +73,7 @@ export default function Hero() {
                         </Link>
                         <Link
                             href="/services"
-                            className="btn px-10 py-5 rounded-sm text-center font-bold text-lg tracking-wide hover:-translate-y-1 transition-transform"
+                            className="px-10 py-5 rounded-sm text-center font-bold text-lg tracking-wide text-white border-2 border-white/40 hover:border-white hover:bg-white/10 transition-all hover:-translate-y-1"
                         >
                             {t('cta_secondary')}
                         </Link>
