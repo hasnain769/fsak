@@ -14,10 +14,10 @@ export default function ContactSection() {
                     <div className="inline-block border-s-4 border-color-accent ps-4 mb-4">
                         <span className="text-color-primary font-bold tracking-wider uppercase">{t('section_label')}</span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-color-dark-grey leading-tight mb-6">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
                         {t('heading')}
                     </h2>
-                    <p className="text-lg text-gray-600 mb-10 leading-relaxed font-medium">
+                    <p className="text-lg text-gray-400 mb-10 leading-relaxed font-medium">
                         {t('body')}
                     </p>
 
@@ -27,8 +27,8 @@ export default function ContactSection() {
                                 <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                             </div>
                             <div>
-                                <h4 className="font-bold text-xl text-color-dark-grey">{t('call_us')}</h4>
-                                <p className="text-gray-600 mt-1" dir="ltr">+966 558 736 888<br />+966 552 277 603</p>
+                                <h4 className="font-bold text-xl text-white">{t('call_us')}</h4>
+                                <p className="text-gray-400 mt-1" dir="ltr">+966 558 736 888<br />+966 552 277 603</p>
                             </div>
                         </div>
 
@@ -37,8 +37,8 @@ export default function ContactSection() {
                                 <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                             </div>
                             <div>
-                                <h4 className="font-bold text-xl text-color-dark-grey">{t('email_us')}</h4>
-                                <p className="text-gray-600 mt-1">info@fsak.sa</p>
+                                <h4 className="font-bold text-xl text-white">{t('email_us')}</h4>
+                                <p className="text-gray-400 mt-1">info@fsak.sa</p>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@ export default function ContactSection() {
                             <label className="block text-sm font-bold text-gray-700 mb-2">{t('form_message')}</label>
                             <textarea required rows={4} className="w-full bg-zinc-50 border border-zinc-200 px-4 py-3 focus:outline-none focus:border-color-primary transition-colors" placeholder={t('form_message')}></textarea>
                         </div>
-                        <button type="submit" className="w-full bg-color-accent hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-sm transition-all shadow-[4px_4px_0px_rgba(255,140,0,0.3)] hover:-translate-y-1 mt-4">
+                        <button type="submit" className="btn w-full py-4 px-8 rounded-sm font-bold transition-all hover:-translate-y-0.5 mt-4">
                             {t('form_submit')}
                         </button>
                     </form>
