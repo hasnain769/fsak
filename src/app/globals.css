@@ -40,6 +40,46 @@ body {
   font-family: var(--font-sans);
 }
 
+/* ─── Smooth page/locale transitions (View Transitions API) ─── */
+@view-transition {
+  navigation: auto;
+}
+
+/* Outgoing page: fade + slide up slightly */
+::view-transition-old(root) {
+  animation: 220ms ease-in both vt-fade-out;
+}
+
+/* Incoming page: fade + slide in from below */
+::view-transition-new(root) {
+  animation: 280ms ease-out both vt-fade-in;
+}
+
+@keyframes vt-fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes vt-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 /* White/light sections need dark text since global foreground is now light */
 .bg-white,
 .bg-zinc-50,
