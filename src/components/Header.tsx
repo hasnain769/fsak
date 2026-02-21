@@ -72,7 +72,7 @@ export default function Header() {
                     <Link href={pathname} locale={toggleLocale} className="block w-full py-2 font-bold text-color-primary" onClick={() => setIsMenuOpen(false)}>
                         {locale === 'en' ? 'Switch to Arabic (العربية)' : 'Switch to English (EN)'}
                     </Link>
-                    <Link href="/contact" className="block w-full text-center mt-4 bg-color-accent text-white px-6 py-3 rounded-sm font-semibold shadow-md" onClick={() => setIsMenuOpen(false)}>
+                    <Link href="/contact" className="btn block w-full text-center mt-2 px-6 py-3 rounded-sm font-bold" onClick={() => setIsMenuOpen(false)}>
                         {t('get_quote')}
                     </Link>
                 </div>
