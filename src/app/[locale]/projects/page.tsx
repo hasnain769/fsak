@@ -96,7 +96,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
                 <div className="container mx-auto px-6">
                     <h2 className="text-4xl font-extrabold text-color-dark-grey mb-4">{t('cta_heading')}</h2>
                     <p className="text-lg text-gray-500 mb-8 max-w-lg mx-auto">{t('cta_body')}</p>
-                    <Link href="/contact" className="inline-block bg-color-accent hover:bg-orange-500 text-white font-bold py-4 px-10 rounded-sm shadow-md transition-colors">
+                    <Link href="/contact" className="btn inline-block py-4 px-10 rounded-sm font-bold shadow-md transition-colors">
                         {t('cta_btn')}
                     </Link>
                 </div>

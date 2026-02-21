@@ -29,7 +29,10 @@ export default function Footer() {
                         <li><Link href="/services#land" className="hover:text-color-accent transition-colors">{t('land_transport')}</Link></li>
                         <li><Link href="/services#heavy" className="hover:text-color-accent transition-colors">{t('heavy_transport')}</Link></li>
                         <li><Link href="/services#customs" className="hover:text-color-accent transition-colors">{t('customs_clearance')}</Link></li>
+                        <li><Link href="/services#freight" className="hover:text-color-accent transition-colors">{t('freight_services')}</Link></li>
                         <li><Link href="/services#warehousing" className="hover:text-color-accent transition-colors">{t('warehousing')}</Link></li>
+                        <li><Link href="/services#supply" className="hover:text-color-accent transition-colors">{t('supply_chain')}</Link></li>
+                        <li><Link href="/services#cross" className="hover:text-color-accent transition-colors">{t('cross_border')}</Link></li>
                     </ul>
                 </div>
 
