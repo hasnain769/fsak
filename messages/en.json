@@ -69,6 +69,10 @@
             "supply_chain": {
                 "title": "Supply Chain",
                 "description": "End-to-end supply chain optimization to streamline operations and reduce overhead costs."
+            },
+            "cross_border_transport": {
+                "title": "Cross-Border Transportation",
+                "description": "Seamless freight movement across GCC borders with full documentation handling, border coordination, and transit customs management."
             }
         }
     },
