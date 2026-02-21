@@ -1,0 +1,16 @@
+{
+    "weights": {
+        "holding": 1.0,
+        "ruling": 0.9,
+        "opinion_body": 0.8,
+        "syllabus": 0.6,
+        "dicta": 0.4,
+        "dissent": 0.2,
+        "concurrence": 0.3
+    },
+    "authority_levels": {
+        "mandatory": 1.0,
+        "persuasive": 0.5,
+        "non_precedential": 0.1
+    }
+}

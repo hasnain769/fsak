@@ -1,0 +1,171 @@
+{
+    "Index": {
+        "title": "Welcome to FSAK Logistics"
+    },
+    "Hero": {
+        "headline_1": "Powering",
+        "headline_highlight": "Global",
+        "headline_2": "Logistics",
+        "subheadline": "Your trusted partner for specialized heavy transport, comprehensive customs clearance, and end-to-end supply chain solutions across Saudi Arabia.",
+        "cta_primary": "Request a Quote",
+        "cta_secondary": "Explore Services"
+    },
+    "Header": {
+        "about": "About Us",
+        "services": "Services",
+        "projects": "Projects",
+        "contact": "Contact Us",
+        "get_quote": "Get a Quote"
+    },
+    "Footer": {
+        "tagline": "Your Trusted Logistics Partner. Bold, industrial, professional transport services across Saudi Arabia.",
+        "quick_links": "Quick Links",
+        "services": "Our Services",
+        "contact_us": "Contact Us",
+        "about": "About",
+        "projects": "Case Studies",
+        "contact": "Contact",
+        "land_transport": "Land Transport",
+        "heavy_transport": "Heavy Transport",
+        "customs_clearance": "Customs Clearance",
+        "warehousing": "Warehousing",
+        "phone": "Phone",
+        "email": "Email",
+        "location": "Location",
+        "all_rights_reserved": "All Rights Reserved"
+    },
+    "About": {
+        "section_label": "Who We Are",
+        "heading": "About FSAK Logistics",
+        "body": "We are more than just a transport company. With over a decade of hands-on experience in the Saudi market, we deliver comprehensive logistics solutions designed to power your business. From heavy transport to seamless customs clearance, our dedicated fleet and expert team ensure your cargo arrives safely, on time, every time.",
+        "fleet_size": "Vehicles in Fleet",
+        "support": "Operations Support"
+    },
+    "Services": {
+        "section_label": "Our Expertise",
+        "heading": "Comprehensive Logistics Solutions",
+        "learn_more": "Learn More",
+        "items": {
+            "land_transport": {
+                "title": "Land Transport",
+                "description": "Reliable and efficient point-to-point land freight services tailored for domestic and GCC routes."
+            },
+            "heavy_transport": {
+                "title": "Heavy Transport",
+                "description": "Specialized fleet dedicated to oversized, heavy, and abnormal cargo movements."
+            },
+            "customs_clearance": {
+                "title": "Customs Clearance",
+                "description": "Expert handling of all documentation and procedures for smooth cross-border transportation."
+            },
+            "freight_services": {
+                "title": "Freight Services",
+                "description": "Flexible freight forwarding solutions utilizing our extensive network to meet your deadlines."
+            },
+            "warehousing": {
+                "title": "Warehousing",
+                "description": "Secure, scalable storage facilities equipped with modern inventory management systems."
+            },
+            "supply_chain": {
+                "title": "Supply Chain",
+                "description": "End-to-end supply chain optimization to streamline operations and reduce overhead costs."
+            }
+        }
+    },
+    "Projects": {
+        "section_label": "Our Portfolio",
+        "heading": "Projects & Case Studies",
+        "view_all": "View All Projects",
+        "items": {
+            "project_1": {
+                "category": "Heavy Transport",
+                "title": "Oversized Industrial Equipment Delivery",
+                "description": "Successfully transported 200+ tons of industrial equipment across 1,200km in Saudi Arabia."
+            },
+            "project_2": {
+                "category": "Customs Clearance",
+                "title": "Express Port Clearance — Jeddah",
+                "description": "Cleared 150 containers within 48 hours, saving the client significant demurrage costs."
+            },
+            "project_3": {
+                "category": "Warehousing",
+                "title": "Regional Distribution Center Setup",
+                "description": "Established a 5,000 sqm distribution hub for a leading FMCG manufacturer in Riyadh."
+            },
+            "project_4": {
+                "category": "Land Transport",
+                "title": "Cross-Kingdom Freight Route",
+                "description": "Operated a dedicated truck lane between Riyadh and Jeddah, achieving 98% on-time delivery."
+            },
+            "project_5": {
+                "category": "Freight Services",
+                "title": "Air-Freight Ground Handover — KAIA",
+                "description": "Managed the ground logistics for 80 air-freight shipments at King Abdulaziz International Airport."
+            },
+            "project_6": {
+                "category": "Supply Chain",
+                "title": "End-to-End Supply Chain for Petrochemical Firm",
+                "description": "Designed and operated a full supply-chain solution from procurement through final-mile delivery."
+            }
+        }
+    },
+    "Testimonials": {
+        "quote": "FSAK Logistics has been our go-to partner for all critical heavy transport needs. Their professionalism and reliability are unmatched in the region.",
+        "author": "Ahmed Al-Rashid",
+        "company": "Operations Director, Al-Rashid Industries"
+    },
+    "Contact": {
+        "section_label": "Get In Touch",
+        "heading": "Request a Quote",
+        "info_heading": "Contact Information",
+        "address_label": "Office Address",
+        "body": "Ready to optimize your supply chain? Fill in the form and one of our logistics experts will get back to you within 24 hours.",
+        "call_us": "Call Us",
+        "email_us": "Email Us",
+        "form_title": "Send Us a Message",
+        "form_name": "Full Name",
+        "form_phone": "Phone Number",
+        "form_email": "Email Address",
+        "form_service": "Service Required",
+        "form_service_placeholder": "Select a service...",
+        "form_message": "Your Message",
+        "form_submit": "Submit Request",
+        "success_title": "Message Sent!",
+        "success_body": "Thank you for reaching out. Our team will contact you within 24 hours."
+    },
+    "AboutPage": {
+        "section_label": "Who We Are",
+        "title": "About FSAK Logistics",
+        "who_heading": "Building Saudi Arabia's Logistics Backbone",
+        "who_body_1": "FSAK Logistics was founded on one mission: to provide Saudi Arabia with a truly reliable, end-to-end logistics partner. From our first fleet of trucks to a fully integrated operation, we have grown in every direction — yet our commitment to on-time, damage-free delivery has never wavered.",
+        "who_body_2": "Today we serve clients across the Kingdom and the GCC, offering land transport, heavy hauling, customs clearance, freight forwarding, warehousing, and full supply-chain management — all under one roof.",
+        "founded_label": "Established in Riyadh",
+        "stat_fleet": "Vehicles in Fleet",
+        "stat_projects": "Projects Completed",
+        "stat_services": "Service Categories",
+        "stat_years": "Years of Experience",
+        "mission_heading": "Our Mission",
+        "mission_body": "To deliver reliable, technology-enabled logistics solutions that empower businesses across Saudi Arabia and the GCC, ensuring every shipment arrives safely and on time.",
+        "vision_heading": "Our Vision",
+        "vision_body": "To be the most trusted logistics brand in the Kingdom, recognised for innovation, integrity, and an unwavering commitment to our clients' success.",
+        "cta_heading": "Ready to Work With Us?",
+        "cta_body": "Let's talk about how FSAK Logistics can power your next project.",
+        "cta_btn": "Get a Free Quote"
+    },
+    "ServicesPage": {
+        "section_label": "What We Do",
+        "title": "Our Services",
+        "subtitle": "Six specialised service lines — one trusted partner.",
+        "cta_heading": "Need a Tailored Logistics Solution?",
+        "cta_body": "Our experts are ready to design the perfect plan for your cargo.",
+        "cta_btn": "Request a Quote"
+    },
+    "ProjectsPage": {
+        "section_label": "Portfolio",
+        "title": "Projects & Case Studies",
+        "subtitle": "A look at the complex logistics challenges we have solved.",
+        "cta_heading": "Have a Complex Logistics Challenge?",
+        "cta_body": "We thrive on difficult projects. Let us show you what FSAK can do.",
+        "cta_btn": "Contact Our Team"
+    }
+}

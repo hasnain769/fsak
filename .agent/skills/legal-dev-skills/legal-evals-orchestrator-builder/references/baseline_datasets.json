@@ -1,0 +1,18 @@
+{
+    "benchmarks": [
+        {
+            "id": "ben-001",
+            "question": "Does the Fourteenth Amendment apply to state governments?",
+            "answer": "Yes, through the Due Process Clause of the Fourteenth Amendment, most protections of the Bill of Rights are incorporated against the states.",
+            "citation": "McDonald v. Chicago, 561 U.S. 742 (2010)",
+            "jurisdiction": "Federal"
+        },
+        {
+            "id": "ben-002",
+            "question": "What is the standard for 'Res Ipsa Loquitur' in New York?",
+            "answer": "The event must be of a kind which ordinarily does not occur in the absence of someone's negligence.",
+            "citation": "Corcoran v. Banner Super Mkt., 19 N.Y.2d 425 (1967)",
+            "jurisdiction": "NY"
+        }
+    ]
+}

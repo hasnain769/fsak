@@ -1,0 +1,17 @@
+{
+    "jurisdiction_multipliers": {
+        "target": 1.5,
+        "federal": 1.2,
+        "other_state": 0.8
+    },
+    "court_level_weights": {
+        "supreme_court": 1.0,
+        "appellate_court": 0.8,
+        "district_court": 0.6
+    },
+    "zone_priority": {
+        "holding": 1.0,
+        "opinion_body": 0.8,
+        "dissent": 0.3
+    }
+}

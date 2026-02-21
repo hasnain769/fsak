@@ -1,0 +1,103 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "case_metadata": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "docket_number": {
+                    "type": "string"
+                },
+                "court": {
+                    "type": "string"
+                },
+                "date": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "title",
+                "court"
+            ]
+        },
+        "syllabus": {
+            "type": "string"
+        },
+        "headnotes": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "opinion_body": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "paragraph_index": {
+                        "type": "integer"
+                    },
+                    "text": {
+                        "type": "string"
+                    },
+                    "page_number": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "paragraph_index",
+                    "text"
+                ]
+            }
+        },
+        "concurrences": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "author": {
+                        "type": "string"
+                    },
+                    "text": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "dissents": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "author": {
+                        "type": "string"
+                    },
+                    "text": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "footnotes": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "text": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    },
+    "required": [
+        "case_metadata",
+        "opinion_body"
+    ]
+}

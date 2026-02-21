@@ -1,0 +1,21 @@
+{
+    "irac_compliance": {
+        "issue": "Did the model clearly identify the legal question?",
+        "rule": "Is the stated legal rule accurate and cited correctly?",
+        "application": "Is the rule applied logically to the facts?",
+        "conclusion": "Is the result consistent with the analysis?",
+        "scoring": {
+            "1": "Missing most components",
+            "3": "Passable IRAC but weak links",
+            "5": "Perfect IRAC with precise application"
+        }
+    },
+    "citation_grounding": {
+        "threshold": 0.98,
+        "penalty_per_hallucination": -1.0
+    },
+    "tone": {
+        "professional": "Objective, formal, and precise",
+        "unacceptable": "Emotional, biased, or speculative"
+    }
+}

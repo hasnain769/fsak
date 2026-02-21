@@ -1,0 +1,17 @@
+{
+    "typescript": {
+        "framework": "Vitest",
+        "run_cmd": "npm run test",
+        "template": "templates/jest.test.ts"
+    },
+    "python": {
+        "framework": "Pytest",
+        "run_cmd": "pytest",
+        "template": "templates/pytest.test.py"
+    },
+    "browser": {
+        "framework": "Playwright",
+        "run_cmd": "npx playwright test",
+        "note": "Use this for Skill 8: e2e-automation-master"
+    }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Legal RAG Eval Dashboard</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f9; padding: 20px; }
+        .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .success { color: #28a745; font-weight: bold; }
+        .fail { color: #dc3545; font-weight: bold; }
+        .progress-bar { background: #e9ecef; border-radius: 4px; height: 20px; width: 100%; border: 1px solid #ccc; }
+        .progress { background: #007bff; height: 100%; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>Legal Evaluation Performance</h1>
+    <div class="card">
+        <h2>Overall Faithfulness: <span class="success">98.5%</span></h2>
+        <div class="progress-bar"><div class="progress" style="width: 98.5%;"></div></div>
+    </div>
+    <div class="card">
+        <h2>Citation Accuracy</h2>
+        <ul>
+            <li>Valid Citations: 45</li>
+            <li>Hallucinations: <span class="fail">0</span></li>
+        </ul>
+    </div>
+</body>
+</html>

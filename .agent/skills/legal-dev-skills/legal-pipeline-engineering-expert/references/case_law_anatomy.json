@@ -1,0 +1,55 @@
+{
+    "zones": {
+        "header": {
+            "description": "Parties, Docket No, Court, Date.",
+            "anchors": [
+                "v.",
+                "No.",
+                "Argued",
+                "Decided"
+            ]
+        },
+        "syllabus": {
+            "description": "The court-provided summary (non-precedential).",
+            "anchors": [
+                "Syllabus",
+                "Held"
+            ]
+        },
+        "headnotes": {
+            "description": "Specific points of law indexed by publishers.",
+            "anchors": [
+                "[1]",
+                "[2]",
+                "[3]"
+            ]
+        },
+        "opinion": {
+            "description": "The primary precedential text.",
+            "anchors": [
+                "delivered the opinion of the Court",
+                "opinion of the Court"
+            ]
+        },
+        "concurrence": {
+            "description": "Separate logic blocks agreeing with the result but not the reasoning.",
+            "anchors": [
+                "concurring",
+                "concurs"
+            ]
+        },
+        "dissent": {
+            "description": "Separate logic blocks disagreeing with the result.",
+            "anchors": [
+                "dissenting",
+                "dissents"
+            ]
+        },
+        "footnotes": {
+            "description": "References and citations at the bottom of pages.",
+            "anchors": [
+                "*"
+            ]
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "rerank_heuristics": {
+        "citation_match": "Is the specific citation mentioned in the query present and central to the document?",
+        "legal_principle": "Does the document discuss the core legal concept (e.g., 'Due Process', 'Res Ipsa Loquitur') in a precedential context?",
+        "factual_similarity": "Are the material facts of the case similar to the user's scenario?"
+    },
+    "prompt_templates": {
+        "relevance_assessment": "Given the legal query: {query}\nEvaluate the document below for its authority and relevance to the specific legal question. Assign a score from 0-1 based on jurisdictional weight and precedential value.\nDocument: {document}"
+    }
+}

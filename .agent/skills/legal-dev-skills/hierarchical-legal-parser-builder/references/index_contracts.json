@@ -1,0 +1,44 @@
+{
+    "vector_node": {
+        "properties": {
+            "text": "string",
+            "embedding": "list<float>",
+            "breadcrumb": "string",
+            "metadata": {
+                "parent_id": "uuid",
+                "zone": "string",
+                "case_id": "string",
+                "authority": "string"
+            }
+        }
+    },
+    "graph_nodes": {
+        "Case": {
+            "id": "uuid",
+            "title": "string",
+            "citation": "string"
+        },
+        "Opinion": {
+            "id": "uuid",
+            "author": "string"
+        },
+        "Statute": {
+            "id": "uuid",
+            "code": "string"
+        }
+    },
+    "graph_edges": {
+        "CITES": {
+            "source": "Case",
+            "target": "Case"
+        },
+        "INTERPRETS": {
+            "source": "Opinion",
+            "target": "Statute"
+        },
+        "CRITICIZES": {
+            "source": "Dissent",
+            "target": "Opinion"
+        }
+    }
+}

@@ -1,0 +1,253 @@
+{
+    "web": {
+        "frameworks": {
+            "Next.js": {
+                "use_for": "Full-stack, SSR, SEO",
+                "tier": "recommended"
+            },
+            "Remix": {
+                "use_for": "Data-heavy forms",
+                "tier": "recommended"
+            },
+            "Vite + React": {
+                "use_for": "SPA, simple apps",
+                "tier": "approved"
+            },
+            "SvelteKit": {
+                "use_for": "Performance-critical",
+                "tier": "approved"
+            }
+        },
+        "styling": {
+            "TailwindCSS": {
+                "tier": "recommended"
+            },
+            "CSS Modules": {
+                "tier": "approved"
+            },
+            "Styled Components": {
+                "tier": "approved"
+            }
+        },
+        "language": "TypeScript"
+    },
+    "backend": {
+        "runtimes": {
+            "Node.js (Bun)": {
+                "use_for": "Full-stack JS, fast iteration",
+                "tier": "recommended"
+            },
+            "Go": {
+                "use_for": "High performance, concurrency",
+                "tier": "recommended"
+            },
+            "Python (FastAPI)": {
+                "use_for": "ML integration, rapid prototyping",
+                "tier": "recommended"
+            },
+            "Rust": {
+                "use_for": "Systems-level performance",
+                "tier": "approved"
+            }
+        },
+        "frameworks": {
+            "Hono": {
+                "runtime": "Bun/Node",
+                "tier": "recommended"
+            },
+            "Express": {
+                "runtime": "Node",
+                "tier": "approved"
+            },
+            "FastAPI": {
+                "runtime": "Python",
+                "tier": "recommended"
+            },
+            "Fiber": {
+                "runtime": "Go",
+                "tier": "recommended"
+            }
+        }
+    },
+    "database": {
+        "relational": {
+            "PostgreSQL": {
+                "providers": [
+                    "Supabase",
+                    "Neon",
+                    "RDS",
+                    "PlanetScale"
+                ],
+                "tier": "recommended"
+            },
+            "MySQL": {
+                "providers": [
+                    "PlanetScale",
+                    "RDS"
+                ],
+                "tier": "approved"
+            }
+        },
+        "document": {
+            "MongoDB": {
+                "providers": [
+                    "Atlas"
+                ],
+                "tier": "approved"
+            },
+            "Firestore": {
+                "providers": [
+                    "Firebase"
+                ],
+                "tier": "approved"
+            }
+        },
+        "cache": {
+            "Redis": {
+                "providers": [
+                    "Upstash",
+                    "ElastiCache",
+                    "Redis Cloud"
+                ],
+                "tier": "recommended"
+            },
+            "Memcached": {
+                "tier": "approved"
+            }
+        },
+        "search": {
+            "Elasticsearch": {
+                "tier": "approved"
+            },
+            "Meilisearch": {
+                "tier": "recommended"
+            },
+            "Typesense": {
+                "tier": "approved"
+            }
+        }
+    },
+    "infrastructure": {
+        "serverless": {
+            "Vercel": {
+                "use_for": "Next.js, frontend",
+                "tier": "recommended"
+            },
+            "AWS Lambda": {
+                "use_for": "Backend functions",
+                "tier": "approved"
+            },
+            "Cloudflare Workers": {
+                "use_for": "Edge compute",
+                "tier": "recommended"
+            }
+        },
+        "containers": {
+            "Fly.io": {
+                "use_for": "Simple container hosting",
+                "tier": "recommended"
+            },
+            "Railway": {
+                "use_for": "Quick deployments",
+                "tier": "recommended"
+            },
+            "AWS ECS": {
+                "use_for": "Enterprise",
+                "tier": "approved"
+            },
+            "GKE": {
+                "use_for": "Kubernetes",
+                "tier": "approved"
+            }
+        },
+        "cdn": {
+            "Cloudflare": {
+                "tier": "recommended"
+            },
+            "Vercel Edge": {
+                "tier": "recommended"
+            },
+            "AWS CloudFront": {
+                "tier": "approved"
+            }
+        }
+    },
+    "auth": {
+        "providers": {
+            "Clerk": {
+                "use_for": "Quick setup, great DX",
+                "tier": "recommended"
+            },
+            "Auth0": {
+                "use_for": "Enterprise SSO",
+                "tier": "approved"
+            },
+            "Supabase Auth": {
+                "use_for": "Supabase stack",
+                "tier": "recommended"
+            },
+            "NextAuth.js": {
+                "use_for": "Custom Next.js auth",
+                "tier": "approved"
+            }
+        }
+    },
+    "monitoring": {
+        "apm": {
+            "Datadog": {
+                "tier": "approved"
+            },
+            "New Relic": {
+                "tier": "approved"
+            },
+            "Grafana Cloud": {
+                "tier": "recommended"
+            }
+        },
+        "error_tracking": {
+            "Sentry": {
+                "tier": "recommended"
+            },
+            "Bugsnag": {
+                "tier": "approved"
+            }
+        },
+        "logging": {
+            "Axiom": {
+                "tier": "recommended"
+            },
+            "Datadog Logs": {
+                "tier": "approved"
+            },
+            "AWS CloudWatch": {
+                "tier": "approved"
+            }
+        }
+    },
+    "messaging": {
+        "queues": {
+            "BullMQ": {
+                "use_for": "Job queues with Redis",
+                "tier": "recommended"
+            },
+            "RabbitMQ": {
+                "use_for": "Complex routing",
+                "tier": "approved"
+            },
+            "AWS SQS": {
+                "use_for": "Simple queues",
+                "tier": "approved"
+            }
+        },
+        "events": {
+            "Kafka": {
+                "use_for": "Event streaming at scale",
+                "tier": "approved"
+            },
+            "Redis Pub/Sub": {
+                "use_for": "Simple real-time",
+                "tier": "recommended"
+            }
+        }
+    }
+}
