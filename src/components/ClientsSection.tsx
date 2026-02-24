@@ -28,9 +28,9 @@ export default function ClientsSection() {
             <div className="relative w-full flex overflow-hidden group">
                 {/* 
                   The inner track needs to be wide enough to hold all items and animate continuously.
-                  Hovering pauses the animation. 
+                  Hovering pauses the animation. Switches to RTL animation when in Arabic.
                 */}
-                <div className="flex w-max animate-marquee hover:[animation-play-state:paused] items-center space-x-12 md:space-x-24 px-6">
+                <div className="flex w-max animate-marquee rtl:animate-marquee-rtl hover:[animation-play-state:paused] items-center gap-12 md:gap-24 pe-12 md:pe-24">
                     {marqueeItems.map((client, idx) => (
                         <a
                             key={`${client.id}-${idx}`}

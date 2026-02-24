@@ -16,11 +16,18 @@ export default function Header() {
     const toggleLocale = locale === 'en' ? 'ar' : 'en';
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-[#0e0e16]/95 backdrop-blur-md border-b border-white/8 shadow-lg">
-            <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+        <header className="sticky top-0 z-50 w-full bg-[#07020F]/95 backdrop-blur-md border-b border-white/8 shadow-lg">
+            <div className="container mx-auto ps-1 pe-4 md:px-2 h-20 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2">
                     {/* We assume the logo is around 3:1 ratio */}
-                    <Image src="/logo.png" alt="FSAK Logistics Logo" width={150} height={50} className="object-contain" priority />
+                    <Image
+                        src={locale === 'ar' ? "/FSAK Arabic Logo.png" : "/FSAK English logo.png"}
+                        alt="FSAK Logistics Logo"
+                        width={250}
+                        height={65}
+                        className="object-contain"
+                        priority
+                    />
                 </Link>
 
                 {/* Desktop Nav */}

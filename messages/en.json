@@ -122,9 +122,13 @@
         }
     },
     "Testimonials": {
-        "quote": "FSAK Logistics has been our go-to partner for all critical heavy transport needs. Their professionalism and reliability are unmatched in the region.",
-        "author": "Ahmed Al-Rashid",
-        "company": "Operations Director, Al-Rashid Industries"
+        "section_label": "Testimonials",
+        "heading": "What Our Clients Say",
+        "review_1": "FSAK Logistics handled our oversized equipment transport flawlessly. Their specialized fleet and attention to safety protocols gave us complete peace of mind.",
+        "review_2": "Their customs clearance team is incredibly efficient. They saved us days of delays at the port, ensuring our supply chain kept moving without interruption.",
+        "review_3": "A truly reliable partner. Whether it's standard freight or complex warehousing needs, FSAK always delivers on time and with total professionalism.",
+        "review_4": "We've entrusted FSAK with our cross-border transportation for years. Their deep understanding of regional logistics makes border transitions seamless.",
+        "review_5": "Their end-to-end supply chain solutions have optimized our entire operation. The tracking visibility and dedicated support team are second to none."
     },
     "Contact": {
         "section_label": "Get In Touch",

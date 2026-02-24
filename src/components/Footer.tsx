@@ -1,15 +1,22 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 
 export default function Footer() {
     const t = useTranslations('Footer');
+    const locale = useLocale();
 
     return (
         <footer className="bg-color-dark-grey text-white py-14 border-t-8 border-color-primary">
             <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
                 <div className="col-span-1 md:col-span-1 border-r-0 md:border-r border-white/10 pr-6">
-                    <Image src="/logo.png" alt="FSAK Logistics Logo" width={180} height={60} className="object-contain opacity-95 mb-6" />
+                    <Image
+                        src={locale === 'ar' ? "/FSAK Arabic Logo.png" : "/FSAK English logo.png"}
+                        alt="FSAK Logistics Logo"
+                        width={180}
+                        height={60}
+                        className="object-contain opacity-95 mb-6"
+                    />
                     <p className="text-sm text-gray-400 leading-relaxed">{t('tagline')}</p>
                 </div>
 
