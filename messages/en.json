@@ -4,11 +4,15 @@
     },
     "Hero": {
         "headline_1": "Powering",
-        "headline_highlight": "Global",
-        "headline_2": "Logistics",
-        "subheadline": "Your trusted partner for specialized heavy transport, comprehensive customs clearance, and end-to-end supply chain solutions across Saudi Arabia.",
+        "headline_highlight": "Logistics",
+        "headline_2": "Services",
+        "subheadline": "Your trusted partner for specialized heavy transport, comprehensive customs clearance, and integrated supply chain solutions across Saudi Arabia.",
         "cta_primary": "Request a Quote",
-        "cta_secondary": "Explore Services"
+        "cta_secondary": "Explore Services",
+        "body_subtext": "With a fleet of over 100 specialized vehicles, FSAK Logistics handles everything from standard freight to complex oversized equipment transport across Saudi Arabia."
+    },
+    "Clients": {
+        "trusted_by": "Trusted By Industry Leaders"
     },
     "Header": {
         "about": "About Us",

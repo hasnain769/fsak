@@ -20,6 +20,17 @@
   --color-border: var(--color-border);
   --font-sans: var(--font-outfit), var(--font-cairo), 'Segoe UI', sans-serif;
   --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+  --animate-marquee: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% / 5));
+  }
 }
 
 @keyframes fade-in-up {
