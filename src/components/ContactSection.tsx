@@ -72,7 +72,7 @@ export default function ContactSection() {
                             </div>
                             <div>
                                 <h4 className="font-bold text-xl text-white">{t('email_us')}</h4>
-                                <p className="text-gray-400 mt-1">info@fsak.sa</p>
+                                <p className="text-gray-400 mt-1">contact@fsaklogistics.com</p>
                             </div>
                         </div>
                     </div>
