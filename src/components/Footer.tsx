@@ -47,7 +47,7 @@ export default function Footer() {
                     <h4 className="text-lg font-bold mb-6 text-white uppercase tracking-wider">{t('contact_us')}</h4>
                     <address className="not-italic text-sm text-gray-400 space-y-4">
                         <p className="flex flex-col"><strong className="text-white mb-1">{t('phone')}:</strong><a href="tel:+966558736888" className="hover:text-color-accent">+966 558 736 888</a> <a href="tel:+966552277603" className="hover:text-color-accent">+966 552 277 603</a></p>
-                        <p className="flex flex-col"><strong className="text-white mb-1">{t('email')}:</strong><a href="mailto:info@fsak.sa" className="hover:text-color-accent transition-colors">info@fsak.sa</a></p>
+                        <p className="flex flex-col"><strong className="text-white mb-1">{t('email')}:</strong><a href="mailto:contact@fsaklogistics.com" className="hover:text-color-accent transition-colors">contact@fsaklogistics.com</a></p>
                         <p className="flex flex-col"><strong className="text-white mb-1">{t('location')}:</strong><span>An Nasr Rd, Al Masani,<br />Riyadh 14714</span></p>
                     </address>
                 </div>

@@ -144,8 +144,11 @@
         "form_email": "Email Address",
         "form_service": "Service Required",
         "form_service_placeholder": "Select a service...",
-        "form_message": "Your Message",
+        "form_message": "Message / Inquiry details",
         "form_submit": "Submit Request",
+        "form_sending": "Sending...",
+        "form_success_message": "Thank you! Your message has been sent successfully. One of our experts will contact you shortly.",
+        "form_error_message": "Something went wrong. Please try again or contact us directly via email at info@fsak.sa.",
         "success_title": "Message Sent!",
         "success_body": "Thank you for reaching out. Our team will contact you within 24 hours."
     },

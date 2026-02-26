@@ -1,9 +1,43 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 export default function ContactSection() {
     const t = useTranslations('Contact');
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setStatus('loading');
+        setErrorMessage('');
+
+        const formData = new FormData(e.currentTarget);
+        const data = {
+            name: formData.get('name'),
+            phone: formData.get('phone'),
+            service: formData.get('service'),
+            message: formData.get('message'),
+            source: 'Homepage Contact Section',
+        };
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) throw new Error('Failed to send email');
+
+            setStatus('success');
+            (e.target as HTMLFormElement).reset();
+        } catch (error) {
+            setStatus('error');
+            setErrorMessage(t('form_error_message') || 'Something went wrong. Please try again.');
+        }
+    };
 
     return (
         <section id="contact" className="py-24 bg-color-background relative overflow-hidden">
@@ -44,23 +78,36 @@ export default function ContactSection() {
                     </div>
                 </div>
 
-                <div className="bg-white p-8 md:p-10 rounded-sm shadow-xl border border-zinc-100 flex flex-col justify-center">
-                    <h3 className="text-3xl font-bold text-color-dark-grey mb-8">{t('form_title')}</h3>
-                    <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert('Form submitted completely locally in this MVP demo.'); }}>
+                <div className="bg-color-surface p-8 md:p-10 rounded-sm shadow-xl border border-white/5 flex flex-col justify-center">
+                    <h3 className="text-3xl font-bold text-white mb-2">{t('form_title')}</h3>
+
+                    {status === 'success' && (
+                        <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 text-green-400 rounded-sm">
+                            {t('form_success_message') || 'Thank you! Your message has been sent successfully.'}
+                        </div>
+                    )}
+
+                    {status === 'error' && (
+                        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 text-red-400 rounded-sm">
+                            {errorMessage}
+                        </div>
+                    )}
+
+                    <form className="space-y-6 mt-6" onSubmit={handleSubmit}>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label className="block text-sm font-bold text-gray-700 mb-2">{t('form_name')}</label>
-                                <input required type="text" className="w-full bg-zinc-50 border border-zinc-200 px-4 py-3 focus:outline-none focus:border-color-primary transition-colors" placeholder={t('form_name')} />
+                                <label className="block text-sm font-bold text-gray-300 mb-2">{t('form_name')}</label>
+                                <input name="name" required type="text" className="w-full bg-[#161622] border border-white/10 text-white px-4 py-3 focus:outline-none focus:border-color-primary transition-colors" placeholder={t('form_name')} />
                             </div>
                             <div>
-                                <label className="block text-sm font-bold text-gray-700 mb-2">{t('form_phone')}</label>
-                                <input required type="tel" className="w-full bg-zinc-50 border border-zinc-200 px-4 py-3 focus:outline-none focus:border-color-primary transition-colors" placeholder={t('form_phone')} />
+                                <label className="block text-sm font-bold text-gray-300 mb-2">{t('form_phone')}</label>
+                                <input name="phone" required type="tel" className="w-full bg-[#161622] border border-white/10 text-white px-4 py-3 focus:outline-none focus:border-color-primary transition-colors" placeholder={t('form_phone')} />
                             </div>
                         </div>
                         <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-2">{t('form_service')}</label>
-                            <select required className="w-full bg-zinc-50 border border-zinc-200 px-4 py-3 focus:outline-none focus:border-color-primary transition-colors">
-                                <option value="">{t('form_service_placeholder')}</option>
+                            <label className="block text-sm font-bold text-gray-300 mb-2">{t('form_service')}</label>
+                            <select name="service" required className="w-full bg-[#161622] border border-white/10 text-white px-4 py-3 focus:outline-none focus:border-color-primary transition-colors appearance-none">
+                                <option value="" className="text-gray-500">{t('form_service_placeholder')}</option>
                                 <option value="land">Land Transport</option>
                                 <option value="heavy">Heavy Transport</option>
                                 <option value="customs">Customs Clearance</option>
@@ -68,11 +115,11 @@ export default function ContactSection() {
                             </select>
                         </div>
                         <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-2">{t('form_message')}</label>
-                            <textarea required rows={4} className="w-full bg-zinc-50 border border-zinc-200 px-4 py-3 focus:outline-none focus:border-color-primary transition-colors" placeholder={t('form_message')}></textarea>
+                            <label className="block text-sm font-bold text-gray-300 mb-2">{t('form_message')}</label>
+                            <textarea name="message" required rows={4} className="w-full bg-[#161622] border border-white/10 text-white px-4 py-3 focus:outline-none focus:border-color-primary transition-colors" placeholder={t('form_message')}></textarea>
                         </div>
-                        <button type="submit" className="btn w-full py-4 px-8 rounded-sm font-bold transition-all hover:-translate-y-0.5 mt-4">
-                            {t('form_submit')}
+                        <button disabled={status === 'loading'} type="submit" className="btn w-full py-4 px-8 rounded-sm font-bold transition-all hover:-translate-y-0.5 mt-4 disabled:opacity-70 disabled:hover:translate-y-0">
+                            {status === 'loading' ? (t('form_sending') || 'Sending...') : t('form_submit')}
                         </button>
                     </form>
                 </div>
