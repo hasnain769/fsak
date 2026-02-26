@@ -85,7 +85,7 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-color-dark-grey mb-1">{t('email_us')}</h4>
-                                    <a href="mailto:info@fsak.sa" className="text-gray-600 hover:text-color-primary transition-colors">info@fsak.sa</a>
+                                    <a href="mailto:contact@fsaklogistics.com" className="text-gray-600 hover:text-color-primary transition-colors">contact@fsaklogistics.com</a>
                                 </div>
                             </div>
                             {/* Address */}
