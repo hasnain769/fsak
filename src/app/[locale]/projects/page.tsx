@@ -41,6 +41,18 @@ const PROJECTS = [
     },
 ];
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const isAr = locale === 'ar';
+    return {
+        title: isAr ? 'مشاريعنا' : 'Our Projects | FSAK Logistics Case Studies',
+        description: isAr
+            ? 'اطلع على أحدث مشاريع التخليص الجمركي والنقل الثقيل التي نفذتها شركة فيصل صالح عبدالكريم (FSAK) في السعودية والشرق الأوسط.'
+            : 'Explore successful logistics projects, heavy transport case studies, and supply chain solutions delivered by FSAK Logistics across Saudi Arabia, Pakistan, and the Middle East.',
+        keywords: ['FSAK Logistics projects', 'logistics case studies', 'Middle East heavy transport projects', 'Saudi Arabia logistics success']
+    };
+}
+
 export default async function ProjectsPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     setRequestLocale(locale);
@@ -48,8 +60,33 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
     const pt = await getTranslations('Projects');
     const st = await getTranslations('Services.items');
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": locale === 'ar' ? 'مشاريع شركة FSAK Logistics' : 'FSAK Logistics Projects',
+        "description": "Logistics and heavy transport case studies across Saudi Arabia and the Middle East.",
+        "url": `https://www.fsaklogistics.com/${locale}/projects`,
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": PROJECTS.map((project, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "item": {
+                    "@type": "CreativeWork",
+                    "name": pt(`items.${project.key}.title`),
+                    "description": pt(`items.${project.key}.description`),
+                    "url": `https://www.fsaklogistics.com/${locale}/projects#${project.id}`
+                }
+            }))
+        }
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Hero Banner */}
             <section className="relative h-72 md:h-96 flex items-center overflow-hidden bg-color-dark-grey">
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542296332-2e4473faf563?q=80&w=2000')] bg-cover bg-center brightness-25" />

@@ -52,8 +52,26 @@ const SERVICES = [
 export default function ServicesSection() {
     const t = useTranslations('Services');
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": SERVICES.map((service, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+                "@type": "Service",
+                "name": t(`items.${service.key}.title`),
+                "url": `https://www.fsaklogistics.com/services#${service.id}`
+            }
+        }))
+    };
+
     return (
         <section id="services" className="py-24 bg-color-background">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <div className="container mx-auto px-6">
 
                 {/* Section header */}

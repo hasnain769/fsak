@@ -186,5 +186,21 @@
         "cta_heading": "Have a Complex Logistics Challenge?",
         "cta_body": "We thrive on difficult projects. Let us show you what FSAK can do.",
         "cta_btn": "Contact Our Team"
+    },
+    "FAQ": {
+        "section_label": "FAQ",
+        "heading": "Frequently Asked Questions",
+        "items": {
+            "q1": "What logistics services does FSAK offer in Saudi Arabia?",
+            "a1": "FSAK Logistics provides specialized land transport, heavy hauling, customs clearance, freight forwarding, and integrated supply chain solutions across Saudi Arabia.",
+            "q2": "Do you provide cross-border transportation to Pakistan or other Middle Eastern countries?",
+            "a2": "Yes, we specialize in cross-border logistics connecting Saudi Arabia with Pakistan, the GCC, and other Middle Eastern regions, providing full customs handling.",
+            "q3": "How can I get a quote for a heavy transport project?",
+            "a3": "You can request a free quote by filling out our online contact form or by calling our support team directly. We typically respond within 24 hours.",
+            "q4": "Is FSAK equipped for oversized and heavy cargo?",
+            "a4": "Absolutely. With a specialized fleet of over 100 vehicles, we are the trusted partner for oversized industrial equipment and heavy transport across the Kingdom.",
+            "q5": "Where is FSAK Logistics headquartered?",
+            "a5": "Our main operations hub and headquarters are located in Riyadh, Saudi Arabia, allowing us to serve the entire local and regional market efficiently."
+        }
     }
 }

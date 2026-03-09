@@ -47,14 +47,51 @@ const SERVICES = [
     },
 ];
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const isAr = locale === 'ar';
+    return {
+        title: isAr ? 'خدماتنا' : 'Our Services | FSAK Logistics Solutions',
+        description: isAr
+            ? 'نقدم في شركة فيصل صالح عبدالكريم (FSAK) حلولاً لوجستية متكاملة تشمل النقل الثقيل والتخليص الجمركي والتخزين في السعودية والشرق الأوسط.'
+            : 'Comprehensive supply chain solutions, heavy transport, customs clearance, and warehousing services by FSAK Logistics across Saudi Arabia, Pakistan, and the Middle East.',
+        keywords: ['FSAK Logistics services', 'heavy transport Saudi Arabia', 'customs clearance Middle East', 'warehousing Pakistan', 'supply chain solutions']
+    };
+}
+
 export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     setRequestLocale(locale);
     const t = await getTranslations('ServicesPage');
     const st = await getTranslations('Services');
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": locale === 'ar' ? 'خدمات شركة FSAK Logistics' : 'FSAK Logistics Services',
+        "description": "Comprehensive logistics and supply chain services in Saudi Arabia, Middle East, and Pakistan.",
+        "url": `https://www.fsaklogistics.com/${locale}/services`,
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": SERVICES.map((service, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "item": {
+                    "@type": "Service",
+                    "name": st(`items.${service.key}.title`),
+                    "description": st(`items.${service.key}.description`),
+                    "url": `https://www.fsaklogistics.com/${locale}/services#${service.id}`
+                }
+            }))
+        }
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Hero Banner */}
             <section className="relative h-72 md:h-96 flex items-center overflow-hidden bg-color-dark-grey">
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2000')] bg-cover bg-center brightness-25" />

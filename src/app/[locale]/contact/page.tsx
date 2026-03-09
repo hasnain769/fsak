@@ -3,10 +3,47 @@
 import { useTranslations } from 'next-intl';
 import { useState, FormEvent } from 'react';
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const isAr = locale === 'ar';
+    return {
+        title: isAr ? 'اتصل بنا' : 'Contact Us | FSAK Logistics Saudi Arabia',
+        description: isAr
+            ? 'تواصل مع فريق الدعم في شركة فيصل صالح عبدالكريم (FSAK) لخدمات النقل والخدمات اللوجستية في السعودية.'
+            : 'Contact FSAK Logistics for premier heavy transport, customs clearance, and supply chain solutions in Riyadh, Saudi Arabia, the Middle East, and Pakistan.',
+    };
+}
+
 export default function ContactPage() {
     const t = useTranslations('Contact');
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact FSAK Logistics",
+        "description": "Get in touch with FSAK Logistics for heavy transport and supply chain solutions.",
+        "mainEntity": {
+            "@id": "https://www.fsaklogistics.com",
+            "@type": "LogisticsService",
+            "name": "FSAK Logistics",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "An Nasr Rd, Al Masani",
+                "addressLocality": "Riyadh",
+                "postalCode": "14714",
+                "addressCountry": "SA"
+            },
+            "telephone": ["+966558736888", "+966552277603"],
+            "email": "contact@fsaklogistics.com",
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 24.5826,
+                "longitude": 46.7214
+            }
+        }
+    };
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -46,6 +83,10 @@ export default function ContactPage() {
 
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Hero Banner */}
             <section className="relative h-64 md:h-80 flex items-center overflow-hidden bg-color-dark-grey">
                 <div className="absolute inset-0 bg-gradient-to-br from-color-primary to-color-dark-grey" />

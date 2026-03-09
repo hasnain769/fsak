@@ -2,13 +2,46 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const isAr = locale === 'ar';
+    return {
+        title: isAr ? 'من نحن' : 'About Us | Top Logistics Company in Saudi Arabia & Middle East',
+        description: isAr
+            ? 'تعرف على شركة فيصل صالح عبدالكريم (FSAK)، الرائدة في مجال النقل الثقيل والخدمات اللوجستية وتخليص الجمارك في المملكة العربية السعودية والشرق الأوسط.'
+            : 'Discover FSAK Logistics, a premier provider of heavy transport, supply chain, and customs clearance services across Saudi Arabia, the Middle East, and Pakistan. Over 10 years of experience.',
+        keywords: ['FSAK Logistics', 'logistics in Saudi Arabia', 'Middle East logistics', 'Pakistan supply chain', 'heavy transport fleet']
+    };
+}
+
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     setRequestLocale(locale);
     const t = await getTranslations('AboutPage');
+    const isAr = locale === 'ar';
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": isAr ? "من نحن - FSAK Logistics" : "About FSAK Logistics",
+        "description": isAr
+            ? "تعرف على شركة فيصل صالح عبدالكريم (FSAK)، الرائدة في مجال النقل الثقيل والخدمات اللوجستية في المملكة العربية السعودية."
+            : "Discover FSAK Logistics, a premier provider of heavy transport across Saudi Arabia, the Middle East, and Pakistan.",
+        "url": `https://www.fsaklogistics.com/${locale}/about`,
+        "mainEntity": {
+            "@id": "https://www.fsaklogistics.com",
+            "@type": "LogisticsService",
+            "name": "FSAK Logistics",
+            "foundingDate": "2014"
+        }
+    };
 
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Hero Banner */}
             <section className="relative h-72 md:h-96 flex items-center overflow-hidden bg-color-dark-grey">
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?q=80&w=2000')] bg-cover bg-center brightness-30" />
