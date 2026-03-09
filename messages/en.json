@@ -18,6 +18,7 @@
         "about": "About Us",
         "services": "Services",
         "projects": "Projects",
+        "faq": "FAQ",
         "contact": "Contact Us",
         "get_quote": "Get a Quote"
     },
@@ -28,6 +29,7 @@
         "contact_us": "Contact Us",
         "about": "About",
         "projects": "Case Studies",
+        "faq": "FAQ",
         "contact": "Contact",
         "land_transport": "Land Transport",
         "heavy_transport": "Heavy Transport",
@@ -169,7 +171,14 @@
         "vision_body": "To be the most trusted logistics brand in the Kingdom, recognised for innovation, integrity, and an unwavering commitment to our clients' success.",
         "cta_heading": "Ready to Work With Us?",
         "cta_body": "Let's talk about how FSAK Logistics can power your next project.",
-        "cta_btn": "Get a Free Quote"
+        "cta_btn": "Get a Free Quote",
+        "why_choose_heading": "Why Partner With FSAK Logistics?",
+        "why_item_1_title": "Regional Expertise",
+        "why_item_1_body": "Deep understanding of Saudi, Pakistan, and GCC logistics regulations and customs.",
+        "why_item_2_title": "Specialized Fleet",
+        "why_item_2_body": "Over 100 specialized vehicles for heavy transport and oversized cargo.",
+        "why_item_3_title": "End-to-End Solutions",
+        "why_item_3_body": "From port clearance to final-mile delivery, we handle every step."
     },
     "ServicesPage": {
         "section_label": "What We Do",
@@ -177,7 +186,14 @@
         "subtitle": "Six specialised service lines — one trusted partner.",
         "cta_heading": "Need a Tailored Logistics Solution?",
         "cta_body": "Our experts are ready to design the perfect plan for your cargo.",
-        "cta_btn": "Request a Quote"
+        "cta_btn": "Request a Quote",
+        "highlights_heading": "Logistics Excellence Guaranteed",
+        "h1_title": "Safety First",
+        "h1_body": "Strict adherence to international safety standards and heavy load protocols.",
+        "h2_title": "Real-Time Tracking",
+        "h2_body": "Stay informed with our advanced fleet monitoring and cargo tracking systems.",
+        "h3_title": "Expert Team",
+        "h3_body": "Skilled logistics planners and specialized drivers with decades of experience."
     },
     "ProjectsPage": {
         "section_label": "Portfolio",
@@ -185,7 +201,14 @@
         "subtitle": "A look at the complex logistics challenges we have solved.",
         "cta_heading": "Have a Complex Logistics Challenge?",
         "cta_body": "We thrive on difficult projects. Let us show you what FSAK can do.",
-        "cta_btn": "Contact Our Team"
+        "cta_btn": "Contact Our Team",
+        "success_heading": "Why Our Projects Succeed",
+        "s1_title": "Advanced Planning",
+        "s1_body": "Meticulous route planning and site surveys for every heavy hauling project.",
+        "s2_title": "Regulatory Compliance",
+        "s2_body": "Full handling of permits and documentation across Saudi Arabia and GCC.",
+        "s3_title": "Risk Mitigation",
+        "s3_body": "Proactive risk assessment and specialized insurance coverage for peace of mind."
     },
     "FAQ": {
         "section_label": "FAQ",

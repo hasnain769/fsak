@@ -136,6 +136,29 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                 </div>
             </section>
 
+            {/* Excellence Highlights */}
+            <section className="py-24 bg-white border-t border-zinc-100">
+                <div className="container mx-auto px-6">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-4xl font-bold text-color-dark-grey mb-4">{t('highlights_heading')}</h2>
+                        <div className="w-24 h-1 bg-color-primary mx-auto"></div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                        {[1, 2, 3].map((i) => (
+                            <div key={i} className="flex flex-col items-center">
+                                <div className="w-20 h-20 bg-zinc-50 rounded-full flex items-center justify-center mb-6 text-color-primary shadow-inner">
+                                    <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-2xl font-bold text-color-dark-grey mb-4">{t(`h${i}_title`)}</h3>
+                                <p className="text-gray-600 leading-relaxed">{t(`h${i}_body`)}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* CTA Strip */}
             <section className="py-20 bg-color-primary text-white text-center">
                 <div className="container mx-auto px-6">

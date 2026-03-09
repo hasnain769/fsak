@@ -33,7 +33,7 @@ export default function ContactSection() {
 
             setStatus('success');
             (e.target as HTMLFormElement).reset();
-        } catch (error) {
+        } catch {
             setStatus('error');
             setErrorMessage(t('form_error_message') || 'Something went wrong. Please try again.');
         }

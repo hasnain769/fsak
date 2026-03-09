@@ -44,7 +44,7 @@ export default function TestimonialsSection() {
                                     ))}
                                 </div>
                                 <p className="text-gray-300 italic mb-8 leading-relaxed">
-                                    "{review.quote}"
+                                    &quot;{review.quote}&quot;
                                 </p>
                             </div>
                             <div className="border-t border-white/10 pt-4">

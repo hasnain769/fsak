@@ -128,6 +128,26 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
                 </div>
             </section>
 
+            {/* Success Factors */}
+            <section className="py-24 bg-zinc-900 text-white overflow-hidden relative">
+                <div className="absolute top-0 left-0 w-full h-1 bg-color-accent"></div>
+                <div className="container mx-auto px-6 relative z-10">
+                    <div className="text-center max-w-3xl mx-auto mb-20">
+                        <h2 className="text-4xl font-bold mb-6">{t('success_heading')}</h2>
+                        <p className="text-gray-400 text-lg">Delivering complex logistics solutions requires more than just a fleet — it requires precision planning.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+                        {[1, 2, 3].map((i) => (
+                            <div key={i} className="relative ps-12 border-l border-white/10 hover:border-color-accent transition-colors duration-500">
+                                <div className="absolute left-0 top-0 text-6xl font-black text-white/5 select-none -translate-x-1/2">0{i}</div>
+                                <h3 className="text-2xl font-bold mb-4 tracking-tight">{t(`s${i}_title`)}</h3>
+                                <p className="text-gray-400 leading-relaxed">{t(`s${i}_body`)}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* CTA */}
             <section className="py-20 bg-zinc-50 border-t border-zinc-200 text-center">
                 <div className="container mx-auto px-6">

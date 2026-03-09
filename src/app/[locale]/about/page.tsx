@@ -87,6 +87,31 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 </div>
             </section>
 
+            {/* Why Choose Us */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-6">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-4xl font-bold text-color-dark-grey mb-4">{t('why_choose_heading')}</h2>
+                        <div className="w-24 h-1 bg-color-accent mx-auto"></div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                        {[1, 2, 3].map((i) => (
+                            <div key={i} className="p-8 border border-gray-100 shadow-xl hover:shadow-2xl transition-shadow bg-zinc-50 rounded-sm">
+                                <div className="w-12 h-12 bg-color-primary text-white flex items-center justify-center font-bold text-2xl mb-6">
+                                    0{i}
+                                </div>
+                                <h3 className="text-2xl font-bold text-color-dark-grey mb-4">
+                                    {t(`why_item_${i}_title`)}
+                                </h3>
+                                <p className="text-gray-600 leading-relaxed">
+                                    {t(`why_item_${i}_body`)}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* Mission & Vision */}
             <section className="py-24 bg-color-dark-grey text-white">
                 <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">

@@ -35,6 +35,7 @@ export default function Header() {
                     <Link href="/about" className="hover:text-color-primary transition-colors">{t('about')}</Link>
                     <Link href="/services" className="hover:text-color-primary transition-colors">{t('services')}</Link>
                     <Link href="/projects" className="hover:text-color-primary transition-colors">{t('projects')}</Link>
+                    <Link href="/#faq" className="hover:text-color-primary transition-colors">{t('faq')}</Link>
                 </nav>
 
                 {/* Desktop right section: lang + CTA */}
@@ -74,6 +75,7 @@ export default function Header() {
                     <Link href="/about" className="block w-full py-2 hover:text-color-primary" onClick={() => setIsMenuOpen(false)}>{t('about')}</Link>
                     <Link href="/services" className="block w-full py-2 hover:text-color-primary" onClick={() => setIsMenuOpen(false)}>{t('services')}</Link>
                     <Link href="/projects" className="block w-full py-2 hover:text-color-primary" onClick={() => setIsMenuOpen(false)}>{t('projects')}</Link>
+                    <Link href="/#faq" className="block w-full py-2 hover:text-color-primary" onClick={() => setIsMenuOpen(false)}>{t('faq')}</Link>
                     <Link href="/contact" className="block w-full py-2 hover:text-color-primary" onClick={() => setIsMenuOpen(false)}>{t('contact')}</Link>
                     <hr className="border-color-dark-grey/10 my-2" />
                     <Link href={pathname} locale={toggleLocale} className="block w-full py-2 font-bold text-color-primary" onClick={() => setIsMenuOpen(false)}>
